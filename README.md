@@ -30,8 +30,8 @@ Execution of the resources can be carried out with below commands, provided `ter
 
 ```bash
 terraform init # It will initialize the backend with pre-created S3 bucket and key
-terraform plan -var-file example.tfvars -out eks.plan
-terraform apply eks.plan -var-file example.tfvars -refresh=true -auto-approve
+terraform plan -var-file example.tfvars -refresh=true -out eks.plan
+terraform apply -lock=true -refresh=true eks.plan -auto-approve
 ```
 
 ## Doc generation

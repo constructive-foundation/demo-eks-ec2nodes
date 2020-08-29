@@ -1,4 +1,4 @@
-clustername          = "demo-eks-cluster"
+eks_cluster_name     = "demo-eks-cluster"
 eks_cluster_ver      = "1.17"
 vpc_name             = "vpc-demo"
 worker_instance_type = "t2.large"
