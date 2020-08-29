@@ -1,0 +1,9 @@
+clustername          = "demo-eks-cluster"
+eks_cluster_ver      = "1.17"
+vpc_name             = "vpc-demo"
+worker_instance_type = "t2.large"
+worker_nodes_desired = 3
+worker_nodes_max     = 3
+vpc_cidr             = "10.0.0.0/16"
+vpc_private_subnets  = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+vpc_public_subnets   = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
