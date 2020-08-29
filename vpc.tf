@@ -9,4 +9,10 @@ module "vpc" {
   enable_nat_gateway   = var.nat_enable
   single_nat_gateway   = var.single_nat_enable
   enable_dns_hostnames = var.enable_dns_hostnames
+  public_subnet_tags = {
+    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+  }
+  private_subnet_tags = {
+    "kubernetes.io/cluster/${var.eks_cluster_name}" = "shared"
+  }
 }
